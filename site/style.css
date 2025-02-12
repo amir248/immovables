@@ -72,11 +72,17 @@ body > main > header > nav > ul > li{
     width:100%;
     max-width: 700px;
 }
+picture > img{
+    width:100%;
+    max-width:1440px;
+}
 footer{
     display:flex;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
     width:100%;
     max-width: 1440px;
     background-color: #A89E9E;
+    flex-wrap:wrap;
+    min-height:170px;
 }
