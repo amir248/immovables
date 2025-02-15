@@ -88,3 +88,27 @@ footer{
     flex-wrap:wrap;
     min-height:170px;
 }
+#menuLine{
+    display:block;
+    width:70px;
+    height:3px;
+    background: green;
+}
+#menuLine:nth-child(2){
+    margin-top:15px;
+    margin-bottom:15px;
+}
+
+@media(min-width:900px){
+    #menuLine{
+        display:none;
+    }
+}
+@media(max-width:900px){
+    body > main > header > nav > ul{
+        display:none;
+    }
+    body > main > header > nav > #menuLine{
+        display:none;
+    }
+}

@@ -1,0 +1,43 @@
+*{
+    margin:0;
+    padding:0;
+}
+.lineMenu{
+    display:block;
+    width:70px;
+    height:3px;
+    z-index:99;
+    background: green; /* this color line in menu */
+    opacity:1;
+}
+.lineMenu:nth-child(2){
+    margin-top:10px;
+    margin-bottom:10px;
+}
+#menuDiv{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 70px;
+    flex-direction: column;
+}
+.openMenu{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction:column;
+    width:100%;
+    height:1vh;
+    background-color: rgb(241, 111, 59);
+    top:0;
+    opacity:0;
+    font-size:0;
+    position:absolute;
+    transition:ease 1s;
+}
+.openMenu > a{
+    margin:2%;
+    text-decoration: none;
+    color:white;
+    text-shadow: 1px 1px black;
+}
