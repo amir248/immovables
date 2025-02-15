@@ -7,7 +7,7 @@
     width:70px;
     height:3px;
     z-index:99;
-    background: green; /* this color line in menu */
+    background: #bbb; /* this color line in menu */
     opacity:1;
 }
 .lineMenu:nth-child(2){

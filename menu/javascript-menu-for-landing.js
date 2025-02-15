@@ -8,7 +8,7 @@ if(window.innerWidth>900){
 }
 const menuList={
     ulol : '<a href="/">Главная</a><a href="#about">О нас</a><a href="#">Вся недвижимость</a><a href="#">Аренда</a><a href="#">Продажа</a><a href="#">Контакты</a>',
-    background : "green",
+    background : "#A29494",
     pathMenuList : "header > nav"
 }
 window.addEventListener('DOMContentLoaded',menuFromLanding);
