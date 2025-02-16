@@ -49,12 +49,12 @@ body > main > header > div{
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-    min-height:350px;
+    min-height:70px;
     width:100%;
 }
 body > main > header > div > img{
     width:70px;
-    
+
 }
 .twoSlide{
     display:flex;
