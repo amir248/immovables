@@ -14,10 +14,16 @@ main{
 }
 header{
     width:100%;
-    background: url("/site/img/orig\ 1.jpg");
+    /* background: url("/site/img/orig\ 1.jpg"); */
     background-position: center center;
     background-repeat: no-repeat;
     min-height:100vh;
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    width:100%;
+    max-width:1440px;
+    flex-direction: column;
 }
 body > main > header > nav{
     display:flex;
@@ -37,6 +43,18 @@ body > main > header > nav > ul{
 body > main > header > nav > ul > li{
     display:inline-block;
     margin-right:3%;
+}
+body > main > header > div{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    min-height:350px;
+    width:100%;
+}
+body > main > header > div > img{
+    width:70px;
+    
 }
 .twoSlide{
     display:flex;
