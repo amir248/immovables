@@ -7,7 +7,7 @@ if(window.innerWidth>900){
     document.querySelector('#menuDiv').style.display="none";
 }
 const menuList={
-    ulol : '<a href="/">Главная</a><a href="#about">О нас</a><a href="#">Вся недвижимость</a><a href="#">Аренда</a><a href="#">Продажа</a><a href="#">Контакты</a>',
+    ulol : '<a href="/">Главная</a><a href="/about">О нас</a><a href="#">Вся недвижимость</a><a href="#">Аренда</a><a href="#">Продажа</a><a href="#">Контакты</a>',
     background : "#A29494",
     pathMenuList : "header > nav"
 }
