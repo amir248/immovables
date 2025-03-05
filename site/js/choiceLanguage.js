@@ -2,7 +2,13 @@ const status={
     click: 0,
     color : ""
 };
-
+if(localStorage.getItem("language")=="rus"){
+//     console.log('rus');
+// }else if(localStorage.getItem("language")=="eng"){
+//     console.log("eng");
+}else{
+    localStorage.setItem("language","rus");
+}
 document.querySelector('#choiceLanguage').addEventListener('click',()=>{
     status.click++;
     thatOnload();
