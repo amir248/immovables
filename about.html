@@ -4,10 +4,96 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Antares</title>
+    <!-- <link rel="stylesheet" href="site/style.css"> -->
+  
+    <link rel="shortcut icon" href="site/img/ico.png" type="image/x-icon">
+    <style>
+        *{
+            margin:0;
+            padding:0;
+        }
+        body{
+            max-width: 1440px;
+            width:100%;
+            margin-left: auto;
+            margin-right: auto;
+
+        }
+        article{
+            width: 100%;
+            max-width:1440px;
+           
+        }
+        article > nav{
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            min-height: 170px;
+            width: 100%;
+            max-width: 1440px;
+            background-color: #A89E9E;
+        }
+        @media (max-width: 900px) {
+        #engM, #rusM {
+                display: none;
+            }
+        }
+        header > nav > ul{
+            display: inline-block;
+            width: 100%;
+            min-width: 900px;
+            max-width: 770px;
+        }
+        nav > ul > li {
+            display: inline-block;
+            margin-right: 3%;
+         }
+         header{
+            height:70px;
+         }
+         header > nav{
+            min-height:70px;
+            display:flex;
+            justify-content: space-around;
+            align-items: center;
+            width:100%;
+         }
+    </style>
 </head>
 <body>
     <main>
         <article>
+            <header>
+                <nav> 
+                    <h1 id="rus">Антарес</h1>
+                    <h1 id="eng">Antares</h1>
+                    <ul id="rusM">
+                        <li>Главная</li>
+                        <li>
+                            <a href="/about">О нас</a>
+                        </li>
+                        <li>Вся недвижимость</li>
+                        <li>Аренда</li>
+                        <li>Продажа</li>
+                        <li>Продажа</li>
+                        <li>Контакты</li>
+                        
+                    </ul>
+                    <ul id="engM">
+                        <li>Home</li>
+                        <li>
+                            <a href="/about">About us</a>
+                        </li>
+                        <li>All properties</li>
+                        <li>Rent</li>
+                        <li>Sale</li>
+                        <li>Sale</li>
+                        <li>Contacts</li>
+    
+                    </ul>
+                    <li id="language"><label id="choiceLanguage"><p>Язык</p> <span id="choneRus">Ру</span>/<span id="choneEng">Eng</span></label></li>
+                </nav>
+            </header>
             <h1>Денис Александрович</h1> <p>— специалист по недвижимости: военная ипотека, новостройки, вторичный рынок, аренда. Помощь в получении ипотеки</p>
 
 <p>Если вы хотите купить, продать или арендовать недвижимость, вам может потребоваться помощь специалиста. Денис Александрович — эксперт в этой области, и он готов предложить свои услуги.</p>
@@ -27,5 +113,7 @@
 
         </article>
     </main>
+    <script src="site/js/main.js"></script>
+
 </body>
 </html>
