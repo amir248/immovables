@@ -6,6 +6,7 @@
 
 const menuList={
     ulol : '<a href="/">Главная</a><a href="/about">О нас</a><a href="#">Вся недвижимость</a><a href="#">Аренда</a><a href="#">Продажа</a><a href="#">Контакты</a>',
+    ulol2 : '<a href="/">Home</a><a href="/about">About us</a><a href="#">All properties</a><a href="#">Rent</a><a href="#">Sale</a><a href="#">Contacts</a>',
     background : "#A29494",
     pathMenuList : "header > nav"
 }
@@ -39,8 +40,15 @@ function menuFromLanding(){
         let sheetsMenu=document.createElement('div');
         sheetsMenu.classList.add('openMenu');
         document.querySelector(`${menuList.pathMenuList}`).prepend(sheetsMenu);
-        console.log('open');
-            
+        let xxx=menuList.ulol;
+        console.log('open ' +localStorage.getItem("language"));
+            if(localStorage.getItem("language")=="rus"){
+                console.log('Rus' + " " + menuList.languagaes);
+                 xxx=menuList.ulol;
+            }else{
+                xxx=menuList.ulol2
+                console.log('Eng');
+            }
         setTimeout(()=>{
             document.querySelector('.openMenu').style.cssText=`
                 height:100vh;
@@ -49,7 +57,8 @@ function menuFromLanding(){
                 `;
             document.querySelector('.openMenu').style.background=`${menuList.background}`;
         },100);
-        document.querySelector('.openMenu').innerHTML=`${menuList.ulol}`;
+       
+        document.querySelector('.openMenu').innerHTML=`${xxx}`;
         document.querySelector('.openMenu').addEventListener('click',menuClose);
     }//menuOpen
     function menuClose(){

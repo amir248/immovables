@@ -17,18 +17,27 @@ function thatOnload(){
     
     console.log(status.click);
     if(status.click==1){
-        document.querySelector('#choneRus').style.color='red';
-        document.querySelector('#choneEng').style.color='gray';
+        // document.querySelector('#choneRus').style.color='red';
+        // document.querySelector('#choneEng').style.color='gray';
+        // document.querySelector('#choiceLanguage > p:nth-child(1)').innerHTML='Language';
+        // localStorage.setItem("language","rus");
     }else if(status.click==2){
         document.querySelector('#choneEng').style.color="red";
         document.querySelector('#choneRus').style.color="gray";
         // status.click=0;
+        document.querySelector('#choiceLanguage > p:nth-child(1)').innerHTML='Language';
+        localStorage.setItem("language", "eng");
+
+    // }else if(status.click==3){
+    //     localStorage.setItem("language","rus");
     }else{
         console.log('///////////');
         status.click=1;
         document.querySelector('#choneRus').style.color='red';
         document.querySelector('#choneEng').style.color='gray';
-    }
+        document.querySelector('#choiceLanguage > p:nth-child(1)').innerHTML='Язык';
+        localStorage.setItem("language", "rus");
+}
 }
 thatOnload();
 let rus=document.querySelectorAll('#rus');
@@ -56,7 +65,7 @@ function forLanguage(){
 
             document.querySelectorAll("#rus")[i].style.display='none';
             document.querySelectorAll("#eng")[i].style.display='';
-            console.log(eng.length+ " "+ i.length);
+            console.log(eng.length+ " "+ i);
         }
     }else{
         console.log('ELSE that on load');
