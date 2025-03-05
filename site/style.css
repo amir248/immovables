@@ -38,7 +38,7 @@ body > main > header > nav > ul{
     /* display:inline-block; */
     width:100%;
     /* min-width:900px;s */
-    max-width:1100px;
+    max-width:770px;
 }
 body > main > header > nav > ul > li{
     display:inline-block;
@@ -126,7 +126,13 @@ footer{
     body > main > header > nav > ul{
         display:none;
     }
+   #engM,#rusM{
+    display:none;
+   }
     body > main > header > nav > #menuLine{
         display:none;
     }
+}
+#language{
+    display: inline-block;
 }

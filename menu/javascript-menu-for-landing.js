@@ -3,15 +3,13 @@
 // background menu it's menuList.background, that green/
 // if change link at menu -> menuList.ulol
 //--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------/
-if(window.innerWidth>900){
-    document.querySelector('#menuDiv').style.display="none";
-}
+
 const menuList={
     ulol : '<a href="/">Главная</a><a href="/about">О нас</a><a href="#">Вся недвижимость</a><a href="#">Аренда</a><a href="#">Продажа</a><a href="#">Контакты</a>',
     background : "#A29494",
     pathMenuList : "header > nav"
 }
-window.addEventListener('DOMContentLoaded',menuFromLanding);
+// window.addEventListener('DOMContentLoaded',menuFromLanding);
 function menuFromLanding(){
     let menuDiv=document.createElement('div'); /* maybe NAV */
     // menuDiv.innerHTML='menuOpen';
@@ -68,3 +66,17 @@ function menuFromLanding(){
             },300)
     }//menuClose;
 }// menuFromLanding();
+// console.log(window.innerWidth);
+function whatWindow(){
+    if(window.innerWidth>900){
+        const idEl=document.querySelector('#menuDiv');
+        if(idEl!=null&&idEl!=undefined){
+            document.querySelector('#menuDiv').style.display="none";
+        }
+    }else{
+        menuFromLanding();
+    }
+}
+// ---------- Attention!!! -----------------------------------
+whatWindow();
+// menuFromLanding(); // <--- because addEventListener with asyncAwait not working

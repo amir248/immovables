@@ -6,15 +6,15 @@
     <title>Антарес недвижимость</title>
     <link rel="stylesheet" href="site/style.css">
     <link rel="shortcut icon" href="site/img/ico.png" type="image/x-icon">
-    <script src="menu/javascript-menu-for-landing.js"></script>
+    <!-- <script src="menu/javascript-menu-for-landing.js"></script> -->
 </head>
 <body>
     <main>
         <header>
             <nav> 
-                <h1>Антарес</h1>
-                
-                <ul>
+                <h1 id="rus">Антарес</h1>
+                <h1 id="eng">Antares</h1>
+                <ul id="rusM">
                     <li>Главная</li>
                     <li>
                         <a href="/about">О нас</a>
@@ -24,8 +24,22 @@
                     <li>Продажа</li>
                     <li>Продажа</li>
                     <li>Контакты</li>
-                    <li>Язык Ру/Eng</li>
+                    
                 </ul>
+                
+<ul id="engM">
+ <li>Home</li>
+ <li>
+ <a href="/about">About us</a>
+ </li>
+ <li>All properties</li>
+ <li>Rent</li>
+ <li>Sale</li>
+ <li>Sale</li>
+ <li>Contacts</li>
+
+ </ul>
+ <li id="language"><label id="choiceLanguage">Язык <span id="choneRus">Ру</span>/<span id="choneEng">Eng</span></label></li>
             </nav>
             <picture>
                 <img src="site/img/ok.jpg" alt="Агенство недвижимости Антарес">
@@ -44,9 +58,12 @@
             <div class="twoSlide">
                 <div>
                     <!-- <p>Immovables - находится в престижном деловом районе Ташкента с развитой инфраструктурой. Состоит из несольких блоков и включает в себя жилые апартаменты, офисы, социальные пространства, торговые площади и зоны отдыха.</p> -->
-                     <strong>Денис Александрович специалист по недвижимости, военная ипотека, новостройки, вторичеый рынок. Аренда. Помощь в получении ипотеки тел: <span style="font-size:30px">
+                     <strong id="rus">Денис Александрович специалист по недвижимости, военная ипотека, новостройки, вторичеый рынок. Аренда. Помощь в получении ипотеки тел: <span style="font-size:30px">
                         <a href="tel:+79893619813">89893619813</a> <a href="+79214105872">89214105872</a>
                      </span></strong>
+                     <strong id="eng">Denis Aleksandrovich, real estate specialist, military mortgage, new buildings, secondary market. Rent. Assistance in obtaining a mortgage tel: <span style="font-size:30px">
+                        <a href="tel:+79893619813">89893619813</a> <a href="+79214105872">89214105872</a>
+                        </span></strong>
                 </div>
                 <picture>
                     <img src="site/img/4749130.webp" alt="">
@@ -54,7 +71,8 @@
             </div>
             <div class="threeSlide">
                 <div>
-                    <p>В нем предусмотрены вместительный подземный паркинг, а также зоны для отдыха.</p>
+                    <p id="rus">В нем предусмотрены вместительный подземный паркинг, а также зоны для отдыха.</p>
+                    <p id="eng">It includes spacious underground parking, as well as recreation areas.</p>
                 </div>
                 <picture>
                     <img src="site/img/background.jpg" alt="">
@@ -82,5 +100,6 @@
             
         </footer>
     </main>
+    <script src="site/js/main.js"></script>
 </body>
 </html>
