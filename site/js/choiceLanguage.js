@@ -5,23 +5,15 @@ const status={
 
 document.querySelector('#choiceLanguage').addEventListener('click',()=>{
     status.click++;
-    console.log(status.click);
     thatOnload();
     forLanguage();
 });
-console.log(status.click);
 if(window.innerWidth<=900){
     document.querySelector('body > main > header > nav > ul').style.display='none';
 }
 function thatOnload(){
     
-    console.log(status.click);
-    if(status.click==1){
-        // document.querySelector('#choneRus').style.color='red';
-        // document.querySelector('#choneEng').style.color='gray';
-        // document.querySelector('#choiceLanguage > p:nth-child(1)').innerHTML='Language';
-        // localStorage.setItem("language","rus");
-    }else if(status.click==2){
+    if(status.click==2){
         document.querySelector('#choneEng').style.color="red";
         document.querySelector('#choneRus').style.color="gray";
         // status.click=0;
@@ -30,21 +22,37 @@ function thatOnload(){
 
     // }else if(status.click==3){
     //     localStorage.setItem("language","rus");
-    }else{
-        console.log('///////////');
+    }else if(status.click==3){
+        // console.log('///////////');
         status.click=1;
         document.querySelector('#choneRus').style.color='red';
         document.querySelector('#choneEng').style.color='gray';
         document.querySelector('#choiceLanguage > p:nth-child(1)').innerHTML='Язык';
         localStorage.setItem("language", "rus");
-}
+    }else{
+        // console.log('ELSE');
+        if(localStorage.getItem("language")=="rus"){
+            // console.log("!!!!!!!!!!!!! RUS");
+            status.click=1;
+            
+
+            document.querySelector('#choneRus').style.color='red';
+            document.querySelector('#choneEng').style.color='gray';
+            forLanguage();
+        }else if(localStorage.getItem("language")=="eng"){
+            // console.log("!!!!!!!!!!!!! ENG");
+            status.click=2;
+            document.querySelector('#choneEng').style.color="red";
+            document.querySelector('#choneRus').style.color="gray";
+            forLanguage();
+        }
+    }
 }
 thatOnload();
-let rus=document.querySelectorAll('#rus');
-let eng=document.querySelectorAll('#eng');
-console.log(rus.length);
+
 function forLanguage(){
-    
+    let rus=document.querySelectorAll('#rus');
+    let eng=document.querySelectorAll('#eng');
     if(status.click==1){
         for(let i=0;i<rus.length;i++){
             document.querySelector("#rusM").style.display='';
@@ -55,7 +63,7 @@ function forLanguage(){
             if(rus!=undefined){};
             document.querySelectorAll("#eng")[i].style.display='none';
             
-            console.log(rus.length+ " "+ i);
+            // console.log(rus.length+ " "+ i);
         }
     }else if(status.click==2){
         for(let i=0;i<eng.length;i++){
@@ -65,7 +73,7 @@ function forLanguage(){
 
             document.querySelectorAll("#rus")[i].style.display='none';
             document.querySelectorAll("#eng")[i].style.display='';
-            console.log(eng.length+ " "+ i);
+            // console.log(eng.length+ " "+ i);
         }
     }else{
         console.log('ELSE that on load');

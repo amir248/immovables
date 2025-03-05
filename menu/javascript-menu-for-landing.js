@@ -41,13 +41,13 @@ function menuFromLanding(){
         sheetsMenu.classList.add('openMenu');
         document.querySelector(`${menuList.pathMenuList}`).prepend(sheetsMenu);
         let xxx=menuList.ulol;
-        console.log('open ' +localStorage.getItem("language"));
+        // console.log('open ' +localStorage.getItem("language"));
             if(localStorage.getItem("language")=="rus"){
-                console.log('Rus' + " " + menuList.languagaes);
+                // console.log('Rus' + " " + menuList.languagaes);
                  xxx=menuList.ulol;
             }else{
                 xxx=menuList.ulol2
-                console.log('Eng');
+                // console.log('Eng');
             }
         setTimeout(()=>{
             document.querySelector('.openMenu').style.cssText=`
