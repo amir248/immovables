@@ -3,9 +3,9 @@ const status={
     color : ""
 };
 if(localStorage.getItem("language")=="rus"){
-//     console.log('rus');
-// }else if(localStorage.getItem("language")=="eng"){
-//     console.log("eng");
+    // console.log('rus'); 
+}else if(localStorage.getItem("language")=="eng"){
+    // console.log("eng");
 }else{
     localStorage.setItem("language","rus");
 }
@@ -15,7 +15,11 @@ document.querySelector('#choiceLanguage').addEventListener('click',()=>{
     forLanguage();
 });
 if(window.innerWidth<=900){
-    document.querySelector('body > main > header > nav > ul').style.display='none';
+    if(window.location.pathname=="/"){
+        document.querySelector('body > main > header > nav > ul').style.display='none';
+    }else if(window.location.pathname=="/about"||window.location.pathname=="/about.html"){
+        document.querySelector('body > main > article > header > nav > ul').style.display="none";
+    }
 }
 function thatOnload(){
     
