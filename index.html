@@ -7,44 +7,12 @@
     <link rel="stylesheet" href="site/style.css">
     <link rel="shortcut icon" href="site/img/ico.png" type="image/x-icon">
     <!-- <script src="menu/javascript-menu-for-landing.js"></script> -->
+     <link rel="stylesheet" href="site/css/footer.css">
 </head>
 <body>
     <main>
         <header>
-            <nav> 
-                <h1 id="rus">Антарес</h1>
-                <h1 id="eng">Antares</h1>
-                <ul id="rusM">
-                    <li>Главная</li>
-                    <li>
-                        <a href="/about">О нас</a>
-                    </li>
-                    <li>Вся недвижимость</li>
-                    <li>Аренда</li>
-                    <li>Продажа</li>
-                    <li>Продажа</li>
-                    <li>
-                        <a href="#contacts">Контакты</a>
-                    </li>
-                    
-                </ul>
-                
-                <ul id="engM">
-                    <li>Home</li>
-                    <li>
-                        <a href="/about">About us</a>
-                    </li>
-                    <li>All properties</li>
-                    <li>Rent</li>
-                    <li>Sale</li>
-                    <li>Sale</li>
-                    <li>
-                        <a href="#contacts">Contacts</a>
-                    </li>
-
-                </ul>
-                <li id="language"><label id="choiceLanguage"><p>Язык</p> <span id="choneRus">Ру</span>/<span id="choneEng">Eng</span></label></li>
-            </nav>
+            <nav w3-include-html="site/include/nav.html"></nav>
             <picture>
                 <img src="site/img/ok.jpg" alt="Агенство недвижимости Антарес">
             </picture>
@@ -83,26 +51,7 @@
                 </picture>
             </div>
         </article>
-        <footer>
-            
-                <h3>
-                    <a href="https://immovables.fonolog.ru/">https://immovables.fonolog.ru/</a>
-                    
-                </h3>
-                <ul>
-                    <li id="contacts">contact</li>
-                    <li>
-                        <a href="https://t.me/denflatspb78">telegram</a>
-                    </li>
-                    <li>
-                        <a href="mailto:dinka.80@mail.ru">dinka.80@mail.ru</a>
-                    </li>
-                </ul>
-                <ul>
-                    <li>локация</li>
-                </ul>
-            
-        </footer>
+        <footer w3-include-html="site/include/footer.html"></footer>
     </main>
     <script src="site/js/main.js"></script>
 </body>

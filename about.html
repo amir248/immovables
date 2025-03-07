@@ -5,24 +5,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Antares</title>
     <!-- <link rel="stylesheet" href="site/style.css"> -->
-  
+    <link rel="stylesheet" href="site/css/footer.css">
     <link rel="shortcut icon" href="site/img/ico.png" type="image/x-icon">
     <style>
         *{
             margin:0;
             padding:0;
+            transition: all 1s ease-out;
         }
         body{
             max-width: 1440px;
             width:100%;
             margin-left: auto;
             margin-right: auto;
-
+            transition: all 1s ease-out;
         }
         article{
             width: 100%;
             max-width:1440px;
-           
+            transition: all 1s ease-out;
         }
         article > nav{
             display: flex;
@@ -32,10 +33,12 @@
             width: 100%;
             max-width: 1440px;
             background-color: #A89E9E;
+            transition: all 1s ease-out;
         }
         @media (max-width: 900px) {
         #engM, #rusM {
                 display: none;
+                transition: all 1s ease-out;
             }
         }
         header > nav > ul{
@@ -43,13 +46,16 @@
             width: 100%;
             min-width: 900px;
             max-width: 770px;
+            transition: all 1s ease-out;
         }
         nav > ul > li {
             display: inline-block;
             margin-right: 3%;
+            transition: all 1s ease-out;
          }
          header{
             height:70px;
+            transition: all 1s ease-out;
          }
          header > nav{
             min-height:70px;
@@ -57,46 +63,29 @@
             justify-content: space-around;
             align-items: center;
             width:100%;
+            transition: all 1s ease-out;
+            opacity: 0;
          }
+         nav > ul > li > a{
+            text-decoration: none;
+            color: black;
+            transition: all 1s ease-out;
+        }
+        nav > ul > li > a:hover{
+            color:aquamarine;
+            transition: all 1s ease-out;
+        }
+        #choiceLanguage > p:hover{
+            color:aquamarine;
+            transition: all 1s ease-out;
+        }
     </style>
 </head>
 <body>
     <main>
         <article>
             <header>
-                <nav> 
-                    <h1 id="rus">Антарес</h1>
-                    <h1 id="eng">Antares</h1>
-                    <ul id="rusM">
-                        <li>Главная</li>
-                        <li>
-                            <a href="/about">О нас</a>
-                        </li>
-                        <li>Вся недвижимость</li>
-                        <li>Аренда</li>
-                        <li>Продажа</li>
-                        <li>Продажа</li>
-                        <li>
-                            <a href="/#contacts">Контакты</a>
-                        </li>
-                        
-                    </ul>
-                    <ul id="engM">
-                        <li>Home</li>
-                        <li>
-                            <a href="/about">About us</a>
-                        </li>
-                        <li>All properties</li>
-                        <li>Rent</li>
-                        <li>Sale</li>
-                        <li>Sale</li>
-                        <li>
-                            <a href="/#contacts">Contacts</a>
-                        </li>
-    
-                    </ul>
-                    <li id="language"><label id="choiceLanguage"><p>Язык</p> <span id="choneRus">Ру</span>/<span id="choneEng">Eng</span></label></li>
-                </nav>
+                <nav w3-include-html="site/include/nav.html"></nav>
             </header>
             <h1 id="rus">Денис Александрович</h1> <p id="rus">— специалист по недвижимости: военная ипотека, новостройки, вторичный рынок, аренда. Помощь в получении ипотеки</p>
             <h1 id="eng">Denis Aleksandrovich</h1> <p id="eng">— real estate specialist: military mortgage, new buildings, secondary market, rent. Assistance in obtaining a mortgage</p>
@@ -129,8 +118,10 @@
 
 
         </article>
+ <footer w3-include-html="site/include/footer.html"></footer>
+
     </main>
-    <script src="site/js/main.js"></script>
+    <script defer src="site/js/main.js"></script>
 
 </body>
 </html>

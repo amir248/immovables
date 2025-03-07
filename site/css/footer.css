@@ -1,0 +1,11 @@
+footer{
+    display:flex;
+    justify-content: space-around;
+    align-items: center;
+    width:100%;
+    max-width: 1440px;
+    background-color: #A89E9E;
+    flex-wrap:wrap;
+    min-height:170px;
+    transition: all 1s ease-out;
+}
